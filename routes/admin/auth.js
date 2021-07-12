@@ -1,7 +1,10 @@
 const express = require('express');
+const { check, validationResult } = require('express-validator');
+
 const usersRepo = require('../../repositories/users');
 const signupTemplate = require('../../views/admin/auth/signup');
 const signinTemplate = require('../../views/admin/auth/signin');
+const { requireEmail, requirePassword, requirePasswordConfirmation } = require('./validators');
 
 const router = express.Router();
 
@@ -10,16 +13,20 @@ router.get('/signup', (req, res) => {
 });
 
 
-router.post('/signup', async (req, res) => {
-    const { email, password, passwordConfirmation } = req.body;
+router.post(
+    '/signup', 
+    [
+        requireEmail,
+        requirePassword,
+        requirePasswordConfirmation
+    ], 
+async (req, res) => {
+    const errors = validationResult(req);
+    if( !errors.isEmpty() ){
+        return res.send(signupTemplate({ req, errors }));
+    }
 
-    const existingUser = await usersRepo.getOneBy({ email });
-    if( existingUser ){
-        return res.send('An account with this email already exists')
-    }
-    if( password !== passwordConfirmation ){
-        return res.send('Passwords must match')
-    }
+    const { email, password, passwordConfirmation } = req.body;
 
     // create user in users repo to represent this person
     const user = await usersRepo.create({ email, password });
@@ -27,7 +34,8 @@ router.post('/signup', async (req, res) => {
     // store the id of that user in the user's cookie
     req.session.userId = user.id; // Added by cookie-session
 
-    res.send('Account Created!');
+    res.send('You are signed in!!!');
+    
 });
 
 
@@ -46,7 +54,6 @@ router.post('/signin', async (req, res) => {
     const { email, password } = req.body;
    
     const user = await usersRepo.getOneBy({ email });
-    console.log(user)
 
     if( !user ){
         return res.send('Email not found');
