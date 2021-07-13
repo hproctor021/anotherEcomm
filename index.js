@@ -6,6 +6,12 @@ const cookieSession = require('cookie-session');
 
 const app = express();
 
+app.use(express.static('public'));
+// now every request that is made. Now it is handled first by this middelware - 
+// it will look at the route of the incoming request and see if there is a file in the public dorectory
+// that matches the request route
+// if there is no match, express will continue on to line 15
+
 app.use(bodyParser.urlencoded({ extended: true }));
 // will be applied to all route handlers by placing in app.use()
 app.use(
