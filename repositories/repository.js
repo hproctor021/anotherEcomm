@@ -10,7 +10,7 @@ module.exports = class Repository {
 
         this.filename = filename;
         try {
-            fs.access.Sync(this.filename)
+            fs.accessSync(this.filename)
         } catch (error) {
             fs.writeFileSync(this.filename, '[]')
         }
@@ -32,7 +32,6 @@ module.exports = class Repository {
 
 
     async getAll(){
-        // open file called this.filename
         return JSON.parse(
             await fs.promises.readFile(this.filename, 
                 { encoding: 'utf8' }

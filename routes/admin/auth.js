@@ -37,7 +37,7 @@ async (req, res) => {
     // store the id of that user in the user's cookie
     req.session.userId = user.id; // Added by cookie-session
 
-    res.send('You are signed in!!!');
+    res.redirect('/admin/products');
     
 });
 
@@ -69,7 +69,7 @@ handleErrors(signinTemplate),
     req.session.userId = user.id;
     // at this point we are making the user considered to be authenticated w/ the app
 
-    res.send('You are logged in')
+    res.redirect('/admin/products');
 
 });
 

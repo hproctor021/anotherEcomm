@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "email": "john@example.com",
+    "password": "99e280dd3bb81da7adf03639ed84df236f2acc667cc0d638de5de624efda515fc31582268f782cd05e030cff0f2cfaeb265b015057062c39bd0f04d0f7c61552.889fc1c72501c310",
+    "id": "eba964c5"
+  },
+  {
+    "email": "haley@example.com",
+    "password": "65a4f76ca7cbda020cd45c934982c8560f1f59de5f2e22daaaaea2abe3e19aa0f88bcb94b75218de73cd6f36cee832dc933ee3d9cd3ebdd6f399f9596d147d0f.1d78cd7cdb6928bc",
+    "id": "34ab6de1"
+  },
+  {
+    "email": "walid@example.com",
+    "password": "dcfe7d9ebae34a0cdffc5bbe47d5d1d1495f6d6b1169c40f2f6a3d8227dd86bf3f558506138e7cc585c97be20ecc188a1cdde7498a55d73c035cec1a5b9827b7.8bb961767106cc1c",
+    "id": "eb6054bb"
+  },
+  {
+    "email": "email@example.com",
+    "password": "756a8b57a75035448324c19bca6dce57295608fdae5416915bbc46ca4be38eb88506101083d7b938092985fc7c0c4b94079883045b6bbe1f62e2c0b0a15ad8a8.d723da5f7386d1a8",
+    "id": "625c9dd2"
+  }
+]
