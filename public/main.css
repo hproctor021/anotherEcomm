@@ -35,11 +35,12 @@ body {
 }
 
 .navbar-bottom.navbar {
-  align-items: center;
+  align-items: right;
+  background-color: darksalmon;
 }
 
 .navbar-top.navbar {
-  background-color: var(--primary);
+  background-color: darksalmon;
 }
 
 .navbar-buttons {

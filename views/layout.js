@@ -19,6 +19,10 @@ module.exports = ({ content }) => {
               <div>
                 <ul class="social">
                   <li>
+                    <a href="/"><i class="fas fa-dumbbell"> O M E</i></a>
+                  </li>
+                  <li></li>
+                  <li>
                     <a href=""><i class="fa fa-phone"></i>+1 (555) 987-6543</a>
                   </li>
                   <li>
@@ -28,31 +32,11 @@ module.exports = ({ content }) => {
               </div>
               <div>
                 <ul class="social">
-                  <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                  <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                  <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href=""><i class="fab fa-dribbble"></i></a></li>
-                  <li><a href=""><i class="fab fa-google-plus"></i></a></li>
+                  <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                  <li><a href="/signin">Login</i></a></li>
+                  <li><a href="/signup">Register</i></a></li>
+                  <li><a href="/signout">Logout</i></a></li>
                 </ul>
-              </div>
-            </div>
-          </nav>
-          <nav class="navbar navbar-bottom">
-            <div class="container navbar-container">
-              <div>
-                <a href="/">
-                  <h3 class="title">EComm Shop</h3>
-                </a>
-              </div>
-              <div class="navbar-item">
-                <div class="navbar-buttons">
-                  <div class="navbar-item">
-                    <a href="/"><i class="fa fa-star"></i> Products</a>
-                  </div>
-                  <div class="navbar-item">
-                    <a href="/cart"><i class="fa fa-shopping-cart"></i> Cart</a>
-                  </div>
-                </div>
               </div>
             </div>
           </nav>
